@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import Image from "next/image";
 import {
   MdPlayArrow,
   MdPause,
@@ -24,6 +25,7 @@ function formatDurationDisplay(duration: number) {
 
 interface AudioPlayerProps {
   currentSong?: { title: string; src: string };
+  cover: string;
   songIndex: number;
   songCount: number;
   onNext: () => void;
@@ -55,7 +57,7 @@ export default function AudioPlayer({
     audioRef.current?.pause();
 
     const timeout = setTimeout(() => {
-      if (document.timeline.currentTime > 0) {
+      if ((document.timeline.currentTime as number) > 0) {
         audioRef.current?.play();
       }
     }, 500);
@@ -122,8 +124,8 @@ export default function AudioPlayer({
 
   return (
     <div className="bg-slate-900 text-slate-400 p-3">
-      <div className="flex justify-center h-48">
-        <img src={cover}></img>
+      <div className="relative h-48">
+        <Image src={cover} fill objectFit="contain" alt=""></Image>
       </div>
       {currentSong && (
         <audio
