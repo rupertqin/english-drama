@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 max-w-7xl mx-auto p-2">
       {albums.map((album) => (
-        <Link href={`/drama/${album.id}`}>
+        <Link href={`/drama/play/${album.id}`}>
           <Album key={album.id} {...album}></Album>
         </Link>
       ))}

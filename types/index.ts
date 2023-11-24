@@ -6,3 +6,11 @@ export interface Album {
   time: string;
   cover: string;
 }
+export interface Episode {
+  id: string;
+  albumId: string;
+  title: string;
+  description: string;
+  date: string;
+  time: string;
+}
