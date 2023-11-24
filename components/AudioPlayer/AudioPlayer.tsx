@@ -125,7 +125,7 @@ export default function AudioPlayer({
   return (
     <div className="bg-slate-900 text-slate-400 p-3">
       <div className="relative h-48">
-        <Image src={cover} fill objectFit="contain" alt=""></Image>
+        <Image src={cover} fill className="object-contain" alt=""></Image>
       </div>
       {currentSong && (
         <audio

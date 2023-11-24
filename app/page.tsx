@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 max-w-7xl mx-auto p-2">
-      {albums.map((album) => (
-        <Link key={album.id} href={`/drama/play/${album.id}`}>
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
+      {albums.map((album, i) => (
+        <Link key={i} href={`/drama/play/${album.id}`}>
           <Album {...album}></Album>
         </Link>
       ))}

@@ -18,14 +18,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="text-3xl font-bold p-5 border-b-2 text-amber-500">
+        <header className="max-w-7xl mx-auto text-3xl font-bold py-5 border-b-2 text-amber-500 mb-5">
           <Link href={"/"}>
             英语戏剧
-            <small>English Drama</small>
+            <small className="ml-2 text-base">English Drama</small>
           </Link>
         </header>
 
-        <div>{children}</div>
+        <div className="max-w-7xl mx-auto ">{children}</div>
       </body>
     </html>
   );
