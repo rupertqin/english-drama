@@ -1,5 +1,5 @@
 "use client";
-import { AudioPlayer } from "@/components";
+import AudioPlayer from "@/components/AudioPlayer/AudioPlayer";
 import { Episode } from "@/types";
 
 export default function AudioPlayerWrapper(episode: Episode) {
